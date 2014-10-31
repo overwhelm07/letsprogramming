@@ -13,6 +13,7 @@ tags: []
         <div class="page-content">
       <iframe width="560" height="315" src="//www.youtube.com/embed/9LgyKiq_hU0" frameborder="0" allowfullscreen></iframe>
             <p>파이썬의 특징을 가장 잘 대변해주는 것이 바로 이 for문이다. for문은 매우 유용하고 사용할 때 문장 구조가 한눈에 들어오며 이것을 잘만 쓰면 프로그래밍이 즐겁기까지 하다.</p>
+            <p>위의 동영상 강의를 보고 아래의 글들을 참고한다면 더 쉽게 이해할 수 있을것이다!!!! </p>
 <h2 id="for">for문의 기본구조</h2>
 <p>for 문의 기본적인 구조는 다음과 같다.</p>
 <pre><code>for 변수 in 리스트(또는 터플, 문자열):
@@ -88,6 +89,7 @@ range(1, 11)
 &gt;&gt;&gt; print(sum)
 55
 </code></pre>
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=sum+%3D+0+%0D%0Afor+i+in+range(1,+11)%3A+%0D%0A++++sum+%3D+sum+%2B+i+%0D%0A%0D%0Aprint(sum)&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=2&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
 <p>range(1, 11)은 숫자 1부터 11까지의 숫자를 데이터로 갖는 자료형이다. 따라서 위의 예에서 i변수에 리스트의 숫자들이 하나씩 차례로 대입되면서 sum = sum + i라는 문장을 수행하게 되어 sum은 최종적으로 55가 되게 된다.</p>
 <p>또한 우리가 앞서 살펴 보았던 60점 이상이면 합격인 예제도 range함수를 이용해서 적용시킬 수도 있다. 다음을 보자.</p>
 <pre><code>#marks3.py 
@@ -130,9 +132,76 @@ for number in range(len(marks)):
 <p>위의 예를 보면 for가 두 번 사용되었다. range(2, 10)은 2부터 9까지의 숫자가 차례로 i에 대입된다. i가 처음 2일 때 for 문을 만나게 된다. range(1, 10)은 1부터 10까지의 숫자가 j에 대입되고 그 다음 문장인 print(i*j)를 수행한다. 따라서 i가 2일 때 2*1, 2*2, 2*3, , , ,2*9 까지 차례로 수행되며 그 값을 출력하게 된다. 그 다음에는 i가 3일 때 역시 2일 때와 마찬가지로 수행될 것이고 i가 9일 때까지 계속 반복되게 된다.</p>
 <p>위에서 print(i*j, end=" "), 처럼 end 파라미터를 넣어준 이유는 해당 결과값을 출력할 때 다음 줄로 넘어가지 않고 그 줄에 계속해서 출력하기 위한 것이다. 그 다음의 print('')은 2단, 3단, , 등을 구분하기 위해서 두 번째 for문이 끝나면 결과 값을 다음 줄부터 출력하게 해주는 문장이다.</p>
 <blockquote>
-<p>※ 파이썬 2.7 버전의 경우 위 예제의 <code>print(i*j, end=" ")</code> 대신 <code>print i*j,</code>로 사용해야 한다. (참고: <a href="https://wikidocs.net/743">파이썬 2.7 vs 파이썬 3</a>)</p>
+<p>※ 파이썬 2.7 버전의 경우 위 예제의 <code>print(i*j, end=" ")</code> 대신 <code>print i*j,</code>로 사용해야 한다. </p>
 </blockquote>
 <p>지금껏 우리는 프로그램의 흐름을 제어하는 if, while, for등에 대해서 알아보았다. 독자는 while과 for를 보면서 두 가지가 아주 흡사하다는 느낌을 받았을 것이다. 실제로 for문을 쓰는 부분을 while로 바꿀 수 있는 경우가 많고 while문을 쓴 부분을 for문으로 바꾸어서 사용할 수 있는 경우가 많다.</p>      
+<p>퀴즈!!!!</p>
+<!-- begin quiz script -->
+<script>
+function finish() {
+	var ext = '.html';
+	var results = new Array("none","correct","incorrect");
+	var nums = new Array(3);
+	for(var i = 0; i < nums.length; i++) nums[i] = 0;
+	for(var i = 1; i <= 2; i++) {
+		var q = document.forms['quiz'].elements['question_'+i];
+		if(q[0].type=='checkbox') {
+			var n = 0;
+		}
+		for(var j = 0; j < q.length; j++) {
+			if(q[j].checked) {
+				var a = q[j].value.split(',');
+				for(var k = 0; k < a.length; k++) {
+					nums[a[k]]++;
+				}
+				if(q[j].type=='radio') break;
+				else n++;
+			}
+			if(j == q.length-1&&q[j].type=='radio') {nums[0]++;}
+		}
+		if(q[0].type=='checkbox'&&((document.forms['quiz'].elements['question_'+i+'_min']&&n<document.forms['quiz'].elements['question_'+i+'_min'].value)||(document.forms['quiz'].elements['question_'+i+'_max']&&n>document.forms['quiz'].elements['question_'+i+'_max'].value))) nums[0]++;
+	}
+	var j = new Array('0');
+	for (i in nums) if(nums[i]>nums[j[0]]){j=new Array(''+i);} else if(nums[i]==nums[j[0]])j[j.length] = i;
+	//var o = '';for(var i in results)o+=results[i]+'='+nums[i]+'\n';
+	//alert(o);
+	if(nums[0]!=0) {
+		alert('You missed or incorrectly answered '+nums[0]+' questions!');
+	}
+	else if(j[0]==0) {
+		alert('No result could be determined.');
+	}
+	else {
+		location = results[j[0]]+ext;
+	}
+}
+</script>
+<!-- end quiz script -->   
+
+<!-- begin quiz html -->
+<form name="quiz" action="javascript:finish();">
+<fieldset style="width:300px;">
+<legend><strong>1. for문은 어떤 함수를 이용해서 숫자 리스트를 자동으로 만들어줄까??   </strong> </legend>
+<font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_1" type="radio" value="1"> range</font><br /><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_1" type="radio" value="2"> in</font><br /><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_1" type="radio" value="2"> list</font><br />
+</fieldset>
+<br /><br /><fieldset style="width:300px;">
+<legend><strong>2. for 변수 ㅁ 리스트: ㅁ는?</strong> </legend>
+<font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_2" type="radio" value="2"> one</font><br /><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_2" type="radio" value="2"> go</font><br /><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<input name="question_2" type="radio" value="1"> in</font><br />
+</fieldset>
+<br /><br /> <INPUT TYPE="submit" value="Finish">
+ <INPUT TYPE="reset" value="Reset">
+</form>
+<!-- end quiz html -->                 
+
+
+
+
 
 
 </div>

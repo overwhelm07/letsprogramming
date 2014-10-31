@@ -5,7 +5,9 @@ header : Post Archive
 group: navigation
 ---
 <h1>강좌목록</h1>
-# {% include JB/setup %}
+<h2>컴기초 텀프로젝트 과제는 for문 링크를 클릭하시면 됩니다.</h2>
 
-# {% assign posts_collate = site.posts %}
-# {% include JB/posts_collate %}
+{% include JB/setup %}
+
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}
