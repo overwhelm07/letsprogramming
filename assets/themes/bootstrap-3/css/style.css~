@@ -1,5 +1,10 @@
 /* Custom container */
-
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-lkh3{background-color:#9aff99}
+.tg .tg-0b3v{background-color:#ffccc9;color:#000000;text-align:center}
+.tg .tg-c7d0{background-color:#bbdaff}
 /* Replaced with normal container and standard footer */
 /*.container-narrow {
   margin: 0 auto;
@@ -12,7 +17,48 @@
 /* Replaced with standard BS3 Navbar */
 /*.navbar .nav {
   float: right; }*/
+.answers li { 
+list-style: upper-alpha; 
+} 
 
+label { 
+margin-left: 0.5em; 
+cursor: pointer; 
+} 
+
+#results { 
+background: #dddada; 
+color: 000000; 
+padding: 3px; 
+text-align: center; 
+width: 200px; 
+cursor: pointer; 
+border: 1px solid gray; 
+}
+
+#results:hover { 
+background: #3d91b8; 
+color: #ffffff; 
+padding: 3px; 
+text-align: center; 
+width: 200px; 
+cursor: pointer; 
+border: 1px solid gray; 
+} 
+
+#categorylist { 
+margin-top: 6px; 
+display: none; 
+} 
+
+#category1, #category2, #category3, #category4, #category5, #category6, #category7, #category8, #category9, #category10, #category11 { 
+display: none; 
+}
+
+#closing {
+display: none;
+font-style: italic;
+}
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4 {
   color: #000000;
@@ -20,8 +66,6 @@ h1, h2, h3, h4 {
 #footer {
   background-color: #fdcd60;
 }
-.verticalLine{ border-left: thick solid #ff0000; }
-
 
 /* posts index */
 .post > h3.title {
