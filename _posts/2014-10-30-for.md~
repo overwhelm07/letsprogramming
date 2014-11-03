@@ -11,17 +11,51 @@ tags: []
     <div class="page col-md-9">      
 
         <div class="page-content">
+   <table class="tg">
+  <tr>
+    <th class="tg-0b3v" colspan="2">파이썬 for문 학습하기 전에 checklist</th>
+    <th class="tg-031e">O</th>
+    <th class="tg-031e">X</th>
+  </tr>
+  <tr>
+    <td class="tg-c7d0">1</td>
+    <td class="tg-c7d0">파이썬의 변수명 및 예약어를 학습하기!</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-c7d0">2</td>
+    <td class="tg-c7d0">파이썬 기초문 주석문, 치환문을 학습하기!</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-c7d0">3</td>
+    <td class="tg-c7d0">파이썬 자료형의 종류와 메모리관리 학습하기!</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-lkh3" colspan="4" rowspan="2">위의 사항은 반복문을 학습하기전에 꼭 학습하세요!!!!</td>
+  </tr>
+  <tr>
+  </tr>
+</table>
+
+
       <iframe width="560" height="315" src="//www.youtube.com/embed/9LgyKiq_hU0" frameborder="0" allowfullscreen></iframe>
             <p>파이썬의 특징을 가장 잘 대변해주는 것이 바로 이 for문이다. for문은 매우 유용하고 사용할 때 문장 구조가 한눈에 들어오며 이것을 잘만 쓰면 프로그래밍이 즐겁기까지 하다.</p>
             <p>위의 동영상 강의를 보고 아래의 글들을 참고한다면 더 쉽게 이해할 수 있을것이다!!!! </p>
 <h2 id="for">for문의 기본구조</h2>
 <p>for 문의 기본적인 구조는 다음과 같다.</p>
-<pre><code>for 변수 in 리스트(또는 터플, 문자열):
-    &lt;수행할 문장1&gt;
-    &lt;수행할 문장2&gt;
-    ...
+<pre><code>for &lt;타겟&gt; in &lt;객체&gt;:
+     &lt;수행할 문장1&gt;
+else:
+     &lt;수행할 문장2&gt;
 </code></pre>
-<p>리스트의 첫 번째 요소부터 마지막 요소까지 차례로 변수에 대입해서 <code>&lt;수행할 문장1&gt;, &lt;수행할 문장2&gt;</code> 등을 수행한다.</p>
+<p>객체는 리스트, 터플, 문자열과 같은 시퀀스 형이여야 한다. 이 객체는 타겟에 치환되어 <code>&lt;수행할 문장1&gt;, &lt;수행할 문장2&gt;</code>을 수행한다. 여기서 반복에 횟수는 객체의 크기가 된다.</p>
+
+
 <h2 id="for_1">예제를 통해 for 알아보기</h2>
 <p>for문은 예제를 통해서 보는 것이 가장 알기 쉽다. 예제를 따라해 보도록 하자.</p>
 <p>예 1) 전형적인 for문</p>
