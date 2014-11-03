@@ -1,10 +1,5 @@
 /* Custom container */
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-lkh3{background-color:#9aff99}
-.tg .tg-0b3v{background-color:#ffccc9;color:#000000;text-align:center}
-.tg .tg-c7d0{background-color:#bbdaff}
+
 /* Replaced with normal container and standard footer */
 /*.container-narrow {
   margin: 0 auto;
