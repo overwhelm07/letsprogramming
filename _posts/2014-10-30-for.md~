@@ -236,7 +236,8 @@ function finish() {
 <input name="question_2" type="radio" value="2"> go</font><br /><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
 <input name="question_2" type="radio" value="1"> in</font><br />
 </fieldset>
-<br /><br /> <INPUT TYPE="submit" value="Finish">
+<br /><br /> 
+<p>답 1.range 2. in</p>
  <INPUT TYPE="reset" value="Reset">
 </form>
 <!-- end quiz html -->                 
